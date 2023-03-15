@@ -183,3 +183,8 @@ document.querySelector("#submit").addEventListener("click", () => {
   }, 1500);
   window.scrollTo(0, 0);
 });
+
+// redirect to blog page
+document.getElementById('blog-page').addEventListener('click', function () {
+  window.location.href = './blog.html';
+});
