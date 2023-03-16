@@ -50,17 +50,17 @@ The event loop solves this problem by allowing JavaScript code to be executed as
 The event loop then continuously checks the task queue to see if there are any tasks waiting to be executed. If there are, it takes the first task from the queue and executes it. This process repeats indefinitely, allowing multiple tasks to be executed in parallel, without blocking the main thread.
 `;
 const answer4 = `
-Here a variable named count is used to measure the total number of times setInterval() is called within quizTimer() function.
-This count is used to measure the total consumed time to complete the quiz. It calculates and shows the time in 2 digit minutes and 2 digit seconds.
-Then if the value of count is more than 60 it shows different color for even count value and odd count value. <br>
-At the beginning it checks whether the quizTimer() function is called with a parameter named dismiss or not. If the value of dismissed is truthy then it stops the interval immediately and ends the execution of this function by simply return.
+Here a variable named count is used to measure the total number of times setInterval() is executed within quizTimer() function. This setInterval() delay is 1second.
+This count is used to measure the total consumed time to complete the quiz. It calculates and shows the time in minutes with dividing count by 60 and seconds with the reminder of dividing by 60.
+Then if the value of count is more than 60 (which means time is out) it shows different color for even count value and odd count value. <br>
+At the beginning it checks whether the quizTimer() function is called with a parameter named dismiss or not. If the value of dismissed is truthy then it stops this interval immediately and then ends the execution of the quizTimer() function by simply returning.
 `;
 const answer5 = `
 The function takes two arguments: index and givenAns. 
 <br>
 The function first checks if there is already an answer stored for the selected quiz in the answers array.
 <br>
-If an answer already exists for the selected quiz the function loops through the answers array and finds the index of the stored answer that corresponds to the selected quiz. It then replaces that stored answer with a new object that has the same properties as the quiz in quizData at the given index, but with the givenAns property set to the givenAns argument passed to the function.
+If an answer already exists for the selected quiz the function loops through the answers array and finds the index of the stored answer that corresponds to the selected quiz. It then replaces that stored answer with a new object that has the same properties as the quiz in quizData at the given index, but with the new givenAns property set to the givenAns argument which is passed to the function.
 <br>
 If an answer does not already exist for the selected quiz the function creates a new object that has the same properties as the quiz in quizData at the given index, but with the givenAns property set to the givenAns argument passed to the function. It then pushes this new object into the answers array.
 <br>
